@@ -32,7 +32,8 @@ jobs:
         env:
           GITHUB_PAGES: "true"
         run: npm run build
-        # next.config.js has output: 'export' → produces ./out
+        # output: 'export' in next.config.js produces ./out
+        # GITHUB_PAGES=true applies /scholars-web basePath for github.io/scholars-web
 
       - name: Ensure .nojekyll
         run: touch out/.nojekyll
