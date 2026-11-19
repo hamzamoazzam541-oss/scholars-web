@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
-// Set GITHUB_PAGES=true when building for GitHub Pages deployment so that
-// assetPrefix/basePath point at /scholars-web. Local `next dev` and `next build`
-// (without that flag) serve from root.
+// GITHUB_PAGES=true is set in CI when building for GitHub Pages so that
+// basePath/assetPrefix point at /scholars-web (required when served from
+// https://<user>.github.io/scholars-web/). Local `next dev` serves from root.
 const isGithubPages = process.env.GITHUB_PAGES === 'true';
 const repoName = 'scholars-web';
 
